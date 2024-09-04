@@ -16,7 +16,7 @@ port=$(devil port list|grep xray|awk '{print $1}')
 key=$1
 
 cd ~/xray
-wget https://github.com/XTLS/Xray-core/releases/download/v1.8.20/Xray-freebsd-64.zip && unzip Xray-freebsd-64.zip &&  && echo '{
+wget https://github.com/XTLS/Xray-core/releases/download/v1.8.20/Xray-freebsd-64.zip && unzip Xray-freebsd-64.zip && echo '{
     "log": {
         "loglevel": "warning"
     },
