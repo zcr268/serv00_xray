@@ -12,8 +12,8 @@ if [ "$(ps -efww | grep xray | grep "config.json" | grep -v grep)" = "" ]; then
     nohup ./xray -c config.json >/dev/null 2>&1 &
     echo "已重新启动xray"
 fi
-port=$1
-key=$2
+port=$(devil port list|grep xray|awk '{print $1}')
+key=$1
 
 cd ~/xray
 wget https://github.com/XTLS/Xray-core/releases/download/v1.8.20/Xray-freebsd-64.zip && unzip Xray-freebsd-64.zip &&  && echo '{
