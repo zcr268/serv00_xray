@@ -12,7 +12,7 @@ if [ "$(ps -efww | grep xray | grep "config.json" | grep -v grep)" = "" ]; then
     nohup ./xray -c config.json >/dev/null 2>&1 &
     echo "已重新启动xray"
 fi
-port=$(devil port list|grep xray|awk '{print $1}')
+port=$(devil port list|grep tcp|awk '{print $1}')
 key=$1
 
 cd ~/xray
