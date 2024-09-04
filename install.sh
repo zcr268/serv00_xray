@@ -1,3 +1,4 @@
+rm -rf ~/xray
 mkdir -p ~/xray
 
 if [ "$(ps -efww | grep xray | grep "config.json" | grep -v grep)" = "" ]; then
